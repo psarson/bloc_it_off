@@ -1,0 +1,34 @@
+@import "bootstrap-sprockets";
+@import "bootstrap";
+
+.container {
+  position: fixed;
+  font-style: normal;
+  font-family: helvetica;
+}
+
+body {
+  background-color: #b3ecec;
+}
+
+h1 {
+  font-family: 'Fugaz One', cursive;
+  color: #ffffff;
+  font-weight: normal;
+  letter-spacing: 4pt;
+  word-spacing: 2pt;
+  font-size: 40px;
+  text-align: center;
+  line-height: 1;
+  }
+
+  p {
+    font-family: helvetica, sans-serif;;
+    color: #ffffff;
+    font-weight: normal;
+    letter-spacing: 4pt;
+    word-spacing: 2pt;
+    font-size: 20px;
+    text-align: center;
+    line-height: 1;
+  }

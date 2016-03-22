@@ -1,0 +1,127 @@
+{
+  "RSpec": {
+    "coverage": {
+      "/Users/hannahsarson/bloc/code/bloccitoff/app/helpers/application_helper.rb": [
+        1,
+        null
+      ],
+      "/Users/hannahsarson/bloc/code/bloccitoff/app/helpers/users_helper.rb": [
+        1,
+        null
+      ],
+      "/Users/hannahsarson/bloc/code/bloccitoff/app/helpers/welcome_helper.rb": [
+        1,
+        null
+      ],
+      "/Users/hannahsarson/bloc/code/bloccitoff/app/controllers/users_controller.rb": [
+        1,
+        1,
+        null,
+        null
+      ],
+      "/Users/hannahsarson/bloc/code/bloccitoff/app/controllers/application_controller.rb": [
+        1,
+        null,
+        null,
+        1,
+        null,
+        1,
+        null,
+        null
+      ],
+      "/Users/hannahsarson/bloc/code/bloccitoff/spec/controllers/welcome_controller_spec.rb": [
+        1,
+        null,
+        1,
+        null,
+        1,
+        1,
+        1,
+        0,
+        null,
+        null,
+        null,
+        1,
+        1,
+        1,
+        0,
+        null,
+        null,
+        null,
+        null
+      ],
+      "/Users/hannahsarson/bloc/code/bloccitoff/app/controllers/welcome_controller.rb": [
+        1,
+        1,
+        null,
+        null,
+        1,
+        null,
+        null
+      ],
+      "/Users/hannahsarson/bloc/code/bloccitoff/spec/helpers/users_helper_spec.rb": [
+        1,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        1,
+        1,
+        null
+      ],
+      "/Users/hannahsarson/bloc/code/bloccitoff/spec/helpers/welcome_helper_spec.rb": [
+        1,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        1,
+        1,
+        null
+      ],
+      "/Users/hannahsarson/bloc/code/bloccitoff/spec/models/user_spec.rb": [
+        1,
+        null,
+        1,
+        1,
+        null
+      ],
+      "/Users/hannahsarson/bloc/code/bloccitoff/spec/views/users/show.html.erb_spec.rb": [
+        1,
+        null,
+        1,
+        1,
+        null
+      ],
+      "/Users/hannahsarson/bloc/code/bloccitoff/spec/views/welcome/about.html.erb_spec.rb": [
+        1,
+        null,
+        1,
+        1,
+        null
+      ],
+      "/Users/hannahsarson/bloc/code/bloccitoff/spec/views/welcome/index.html.erb_spec.rb": [
+        1,
+        null,
+        1,
+        1,
+        null
+      ]
+    },
+    "timestamp": 1458608477
+  }
+}
