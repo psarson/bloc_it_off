@@ -1,35 +1,82 @@
 {
   "RSpec": {
     "coverage": {
-      "/Users/hannahsarson/bloc/code/bloccitoff/app/helpers/application_helper.rb": [
+      "/Users/hannahsarson/bloc/code/blocitoff/app/helpers/application_helper.rb": [
         1,
         null
       ],
-      "/Users/hannahsarson/bloc/code/bloccitoff/app/helpers/users_helper.rb": [
+      "/Users/hannahsarson/bloc/code/blocitoff/app/helpers/items_helper.rb": [
         1,
         null
       ],
-      "/Users/hannahsarson/bloc/code/bloccitoff/app/helpers/welcome_helper.rb": [
+      "/Users/hannahsarson/bloc/code/blocitoff/app/helpers/users_helper.rb": [
         1,
         null
       ],
-      "/Users/hannahsarson/bloc/code/bloccitoff/app/controllers/users_controller.rb": [
+      "/Users/hannahsarson/bloc/code/blocitoff/app/helpers/welcome_helper.rb": [
+        1,
+        null
+      ],
+      "/Users/hannahsarson/bloc/code/blocitoff/app/controllers/items_controller.rb": [
+        1,
+        null,
+        1,
+        0,
+        0,
+        null,
+        0,
+        0,
+        0,
+        null,
+        0,
+        0,
+        null,
+        null,
+        null,
+        1,
+        1,
+        0,
+        null,
+        null
+      ],
+      "/Users/hannahsarson/bloc/code/blocitoff/app/controllers/application_controller.rb": [
+        1,
+        null,
+        null,
+        1,
+        null,
+        1,
+        null,
+        null
+      ],
+      "/Users/hannahsarson/bloc/code/blocitoff/spec/controllers/users_controller_spec.rb": [
+        1,
+        null,
+        1,
+        null,
+        1,
+        1,
+        1,
+        null,
+        null,
+        1,
+        1,
+        1,
+        1,
+        null,
+        null,
+        null,
+        null
+      ],
+      "/Users/hannahsarson/bloc/code/blocitoff/app/controllers/users_controller.rb": [
+        1,
+        1,
         1,
         1,
         null,
         null
       ],
-      "/Users/hannahsarson/bloc/code/bloccitoff/app/controllers/application_controller.rb": [
-        1,
-        null,
-        null,
-        1,
-        null,
-        1,
-        null,
-        null
-      ],
-      "/Users/hannahsarson/bloc/code/bloccitoff/spec/controllers/welcome_controller_spec.rb": [
+      "/Users/hannahsarson/bloc/code/blocitoff/spec/controllers/welcome_controller_spec.rb": [
         1,
         null,
         1,
@@ -41,16 +88,9 @@
         null,
         null,
         null,
-        1,
-        1,
-        1,
-        0,
-        null,
-        null,
-        null,
         null
       ],
-      "/Users/hannahsarson/bloc/code/bloccitoff/app/controllers/welcome_controller.rb": [
+      "/Users/hannahsarson/bloc/code/blocitoff/app/controllers/welcome_controller.rb": [
         1,
         1,
         null,
@@ -59,7 +99,7 @@
         null,
         null
       ],
-      "/Users/hannahsarson/bloc/code/bloccitoff/spec/helpers/users_helper_spec.rb": [
+      "/Users/hannahsarson/bloc/code/blocitoff/spec/helpers/items_helper_spec.rb": [
         1,
         null,
         null,
@@ -76,7 +116,7 @@
         1,
         null
       ],
-      "/Users/hannahsarson/bloc/code/bloccitoff/spec/helpers/welcome_helper_spec.rb": [
+      "/Users/hannahsarson/bloc/code/blocitoff/spec/helpers/users_helper_spec.rb": [
         1,
         null,
         null,
@@ -93,28 +133,64 @@
         1,
         null
       ],
-      "/Users/hannahsarson/bloc/code/bloccitoff/spec/models/user_spec.rb": [
+      "/Users/hannahsarson/bloc/code/blocitoff/spec/helpers/welcome_helper_spec.rb": [
+        1,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        1,
+        1,
+        null
+      ],
+      "/Users/hannahsarson/bloc/code/blocitoff/spec/models/item_spec.rb": [
         1,
         null,
         1,
         1,
         null
       ],
-      "/Users/hannahsarson/bloc/code/bloccitoff/spec/views/users/show.html.erb_spec.rb": [
+      "/Users/hannahsarson/bloc/code/blocitoff/app/models/item.rb": [
+        1,
+        1,
+        null
+      ],
+      "/Users/hannahsarson/bloc/code/blocitoff/spec/models/user_spec.rb": [
         1,
         null,
         1,
         1,
         null
       ],
-      "/Users/hannahsarson/bloc/code/bloccitoff/spec/views/welcome/about.html.erb_spec.rb": [
+      "/Users/hannahsarson/bloc/code/blocitoff/spec/views/items/create.html.erb_spec.rb": [
         1,
         null,
         1,
         1,
         null
       ],
-      "/Users/hannahsarson/bloc/code/bloccitoff/spec/views/welcome/index.html.erb_spec.rb": [
+      "/Users/hannahsarson/bloc/code/blocitoff/spec/views/users/show.html.erb_spec.rb": [
+        1,
+        null,
+        1,
+        1,
+        null
+      ],
+      "/Users/hannahsarson/bloc/code/blocitoff/spec/views/welcome/about.html.erb_spec.rb": [
+        1,
+        null,
+        1,
+        1,
+        null
+      ],
+      "/Users/hannahsarson/bloc/code/blocitoff/spec/views/welcome/index.html.erb_spec.rb": [
         1,
         null,
         1,
@@ -122,6 +198,6 @@
         null
       ]
     },
-    "timestamp": 1458608477
+    "timestamp": 1459354674
   }
 }

@@ -1,0 +1,22 @@
+<div class="container">
+<h1>Profile</h1>
+<p>Email: <%= @user.email %></p>
+  <div class="row">
+    <div class="col-md-8">
+      <% @user.items.each do |item| %>
+        <div class="media">
+          <div class="media-body">
+           <%= render @user.items %>
+          </div>
+         <% end %>
+        </div>
+          <div class="media">
+            <div class="media-body">
+            <% if current_user %>
+              <%= render partial: 'items/form', locals: { user: @user, item: Item.new } %>
+            <% end %>
+          </div>
+         </div>
+      </div>
+     </div>
+   </div>
