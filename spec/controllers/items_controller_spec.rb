@@ -1,4 +1,5 @@
 require 'rails_helper'
+require 'Faker'
 
 RSpec.describe ItemsController, type: :controller do
 
@@ -9,16 +10,16 @@ RSpec.describe ItemsController, type: :controller do
 
   describe "POST #create" do
     it "returns http success" do
-      post :create, item: { name: Lorem.sentence }
-      expect(response).to have_http_status(:success)
+      post :create, user_id: @user.id, item: { name: Faker::Lorem.sentence }
+      expect(response).to redirect_to(root_path)
     end
 
     it "increases the number of Item by 1" do
-      expect { post :create, item: {name: Lorem.sentence } }.to change(Item,:count).by(1)
+      expect { post :create, user_id: @user.id, item: {name: Faker::Lorem.sentence } }.to change(Item,:count).by(1)
     end
 
     it "assigns the new item to @item" do
-        post :create, item: { name: Lorem.sentence }
+        post :create, user_id: @user, item: { name: Faker::Lorem.sentence }
         expect(assigns(:item)).to eq Item.last
       end
     end

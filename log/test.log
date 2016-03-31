@@ -803,3 +803,285 @@ Completed 200 OK in 91ms (Views: 47.9ms | ActiveRecord: 0.2ms)
 Processing by WelcomeController#about as HTML
 Completed 500 Internal Server Error in 1ms (ActiveRecord: 0.0ms)
   [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[36mActiveRecord::SchemaMigration Load (30.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mUser Exists (33.6ms)[0m  SELECT  1 AS one FROM "users" WHERE "users"."email" = 'mancy@yahoo.com' LIMIT 1
+  [1m[36mSQL (3.2ms)[0m  [1mINSERT INTO "users" ("id", "email", "encrypted_password", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["id", 0], ["email", "mancy@yahoo.com"], ["encrypted_password", "$2a$04$W0XmlB/RC3I7Ff9nvOBDtOZScVGJzBmInuv5mDfejixx.tof8dgKC"], ["created_at", "2016-03-30 23:48:51.277361"], ["updated_at", "2016-03-30 23:48:51.277361"]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.7ms)[0m  [1mrollback transaction[0m
+  [1m[35m (2.6ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mUser Exists (0.3ms)[0m  SELECT  1 AS one FROM "users" WHERE "users"."email" = 'mancy@yahoo.com' LIMIT 1
+  [1m[36mSQL (0.6ms)[0m  [1mINSERT INTO "users" ("id", "email", "encrypted_password", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["id", 0], ["email", "mancy@yahoo.com"], ["encrypted_password", "$2a$04$WugZHB3chawtAB.VzTwcrOcLILjssA9SIEYYvY7bpVpYF83BzdI02"], ["created_at", "2016-03-30 23:48:51.302795"], ["updated_at", "2016-03-30 23:48:51.302795"]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.5ms)[0m  [1mSELECT COUNT(*) FROM "items"[0m
+  [1m[35m (1.3ms)[0m  rollback transaction
+  [1m[36m (0.2ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mUser Exists (0.2ms)[0m  [1mSELECT  1 AS one FROM "users" WHERE "users"."email" = 'mancy@hotmail.com' LIMIT 1[0m
+  [1m[35mSQL (0.5ms)[0m  INSERT INTO "users" ("id", "email", "encrypted_password", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)  [["id", 0], ["email", "mancy@hotmail.com"], ["encrypted_password", "$2a$04$Q7Zr8.IbDdbQ2ioUKEH7I.tfcoXEFcvhstn6qjcZyhhRcr8kdlAlS"], ["created_at", "2016-03-30 23:48:51.395383"], ["updated_at", "2016-03-30 23:48:51.395383"]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.8ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mUser Exists (0.3ms)[0m  [1mSELECT  1 AS one FROM "users" WHERE "users"."email" = 'mancy@yahoo.com' LIMIT 1[0m
+  [1m[35mSQL (0.6ms)[0m  INSERT INTO "users" ("id", "email", "encrypted_password", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)  [["id", 0], ["email", "mancy@yahoo.com"], ["encrypted_password", "$2a$04$glnIfJEuY/FeSCRkKGKLsOstPbtJLExx3GkCZpckzjcGd19WbJ.hi"], ["created_at", "2016-03-30 23:48:51.414295"], ["updated_at", "2016-03-30 23:48:51.414295"]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Processing by UsersController#show as HTML
+  [1m[35mUser Load (0.6ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 0]]
+  Rendered users/show.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 309ms (Views: 89.6ms | ActiveRecord: 0.6ms)
+  [1m[36m (41.5ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+Processing by WelcomeController#about as HTML
+Completed 500 Internal Server Error in 19ms (ActiveRecord: 0.0ms)
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[36mActiveRecord::SchemaMigration Load (48.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.4ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mUser Exists (23.0ms)[0m  SELECT  1 AS one FROM "users" WHERE "users"."email" = 'mancy@hotmail.com' LIMIT 1
+  [1m[36mSQL (7.4ms)[0m  [1mINSERT INTO "users" ("id", "email", "encrypted_password", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["id", 0], ["email", "mancy@hotmail.com"], ["encrypted_password", "$2a$04$lD1vpGpPkCbyN7uFhfGKZ.He/A6iQyi6iaJxPxIswGtHfSDg0AT9W"], ["created_at", "2016-03-30 23:51:19.356309"], ["updated_at", "2016-03-30 23:51:19.356309"]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (1.0ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mUser Exists (0.3ms)[0m  SELECT  1 AS one FROM "users" WHERE "users"."email" = 'mancy@gmail.com' LIMIT 1
+  [1m[36mSQL (0.5ms)[0m  [1mINSERT INTO "users" ("id", "email", "encrypted_password", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["id", 0], ["email", "mancy@gmail.com"], ["encrypted_password", "$2a$04$iSKxE7XzFVlsobW2bb19CeF9tHe4vdhgdNRSb38ZaYAf8gDp0GOUi"], ["created_at", "2016-03-30 23:51:19.377803"], ["updated_at", "2016-03-30 23:51:19.377803"]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.5ms)[0m  [1mSELECT COUNT(*) FROM "items"[0m
+  [1m[35m (0.7ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mUser Exists (0.3ms)[0m  [1mSELECT  1 AS one FROM "users" WHERE "users"."email" = 'mancy@hotmail.com' LIMIT 1[0m
+  [1m[35mSQL (0.5ms)[0m  INSERT INTO "users" ("id", "email", "encrypted_password", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)  [["id", 0], ["email", "mancy@hotmail.com"], ["encrypted_password", "$2a$04$6MKXElJ0Zq8EFXTSLmg4tekHXjrGV2L4J81wWqkyk3bxLqHRRvevm"], ["created_at", "2016-03-30 23:51:19.398290"], ["updated_at", "2016-03-30 23:51:19.398290"]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (1.1ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mUser Exists (0.2ms)[0m  [1mSELECT  1 AS one FROM "users" WHERE "users"."email" = 'mancy@hotmail.com' LIMIT 1[0m
+  [1m[35mSQL (0.7ms)[0m  INSERT INTO "users" ("id", "email", "encrypted_password", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)  [["id", 0], ["email", "mancy@hotmail.com"], ["encrypted_password", "$2a$04$hiupFkVOQyvvzWfjGra33eIYRDvtd.J/GmaageXUyZVoWbKYdCDFq"], ["created_at", "2016-03-30 23:51:19.414965"], ["updated_at", "2016-03-30 23:51:19.414965"]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Processing by UsersController#show as HTML
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 0]]
+  Rendered users/show.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 121ms (Views: 37.1ms | ActiveRecord: 0.3ms)
+  [1m[36m (0.9ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+Processing by WelcomeController#about as HTML
+Completed 500 Internal Server Error in 0ms (ActiveRecord: 0.0ms)
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[36mActiveRecord::SchemaMigration Load (2.7ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mUser Exists (19.9ms)[0m  SELECT  1 AS one FROM "users" WHERE "users"."email" = 'mancy@hotmail.com' LIMIT 1
+  [1m[36mSQL (7.3ms)[0m  [1mINSERT INTO "users" ("id", "email", "encrypted_password", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["id", 0], ["email", "mancy@hotmail.com"], ["encrypted_password", "$2a$04$qD1.RO7r7K/4vUAos/XQXuJc5NfyjZjavEZPN4nUOQxFGEop8V99K"], ["created_at", "2016-03-30 23:51:54.882315"], ["updated_at", "2016-03-30 23:51:54.882315"]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.8ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mUser Exists (0.3ms)[0m  SELECT  1 AS one FROM "users" WHERE "users"."email" = 'mancy@hotmail.com' LIMIT 1
+  [1m[36mSQL (0.5ms)[0m  [1mINSERT INTO "users" ("id", "email", "encrypted_password", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["id", 0], ["email", "mancy@hotmail.com"], ["encrypted_password", "$2a$04$4DPja.JCwMzep9L4CiNoIu/FCSnItD8ICh7k6pNkYMzUvpbzrFh6O"], ["created_at", "2016-03-30 23:51:54.921939"], ["updated_at", "2016-03-30 23:51:54.921939"]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.5ms)[0m  [1mSELECT COUNT(*) FROM "items"[0m
+  [1m[35m (1.3ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mUser Exists (0.5ms)[0m  [1mSELECT  1 AS one FROM "users" WHERE "users"."email" = 'mancy@yahoo.com' LIMIT 1[0m
+  [1m[35mSQL (0.6ms)[0m  INSERT INTO "users" ("id", "email", "encrypted_password", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)  [["id", 0], ["email", "mancy@yahoo.com"], ["encrypted_password", "$2a$04$U7pMcyYQ1uxNztD8.wB8V.xzfLfXZHrwIWntrmSHuYkr.t/tGUgsq"], ["created_at", "2016-03-30 23:51:54.982082"], ["updated_at", "2016-03-30 23:51:54.982082"]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.7ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mUser Exists (0.2ms)[0m  [1mSELECT  1 AS one FROM "users" WHERE "users"."email" = 'mancy@yahoo.com' LIMIT 1[0m
+  [1m[35mSQL (0.9ms)[0m  INSERT INTO "users" ("id", "email", "encrypted_password", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)  [["id", 0], ["email", "mancy@yahoo.com"], ["encrypted_password", "$2a$04$ztq9R84vR1A6UbEL8cT73uUS3l4BYXFM.SGFJZp7gNFQCy6bBmflK"], ["created_at", "2016-03-30 23:51:54.995008"], ["updated_at", "2016-03-30 23:51:54.995008"]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Processing by UsersController#show as HTML
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 0]]
+  Rendered users/show.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 205ms (Views: 100.1ms | ActiveRecord: 0.2ms)
+  [1m[36m (1.2ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+Processing by WelcomeController#about as HTML
+Completed 500 Internal Server Error in 0ms (ActiveRecord: 0.0ms)
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mUser Exists (4.1ms)[0m  SELECT  1 AS one FROM "users" WHERE "users"."email" = 'mancy@yahoo.com' LIMIT 1
+  [1m[36mSQL (2.2ms)[0m  [1mINSERT INTO "users" ("id", "email", "encrypted_password", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["id", 0], ["email", "mancy@yahoo.com"], ["encrypted_password", "$2a$04$YnIIwllKVlol5/gupvaMzOb/9w1YzATIX6o.GrXM0HaT1yy5awqBS"], ["created_at", "2016-03-30 23:54:06.512542"], ["updated_at", "2016-03-30 23:54:06.512542"]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+Processing by ItemsController#create as HTML
+  Parameters: {"item"=>{"name"=>"Ipsa omnis natus vitae nemo voluptatibus quo et dolorem."}, "user_id"=>"0"}
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 0]]
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (1.2ms)[0m  [1mINSERT INTO "items" ("name", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "Ipsa omnis natus vitae nemo voluptatibus quo et dolorem."], ["user_id", 0], ["created_at", "2016-03-30 23:54:06.599173"], ["updated_at", "2016-03-30 23:54:06.599173"]]
+  [1m[35m (0.2ms)[0m  RELEASE SAVEPOINT active_record_1
+Redirected to http://test.host/
+Completed 302 Found in 75ms (ActiveRecord: 2.0ms)
+  [1m[36m (1.2ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.4ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mUser Exists (0.3ms)[0m  SELECT  1 AS one FROM "users" WHERE "users"."email" = 'mancy@yahoo.com' LIMIT 1
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "users" ("id", "email", "encrypted_password", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["id", 0], ["email", "mancy@yahoo.com"], ["encrypted_password", "$2a$04$DDu0nU.eQF/myAsGOZDgpOHiw7pySL32093KbbUzNTk0J1wx9ggzW"], ["created_at", "2016-03-30 23:54:06.689287"], ["updated_at", "2016-03-30 23:54:06.689287"]]
+  [1m[35m (0.3ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.2ms)[0m  [1mSELECT COUNT(*) FROM "items"[0m
+Processing by ItemsController#create as HTML
+  Parameters: {"item"=>{"name"=>"Rerum aut beatae modi architecto dolores nisi."}, "user_id"=>"0"}
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 0]]
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.6ms)[0m  INSERT INTO "items" ("name", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)  [["name", "Rerum aut beatae modi architecto dolores nisi."], ["user_id", 0], ["created_at", "2016-03-30 23:54:06.703652"], ["updated_at", "2016-03-30 23:54:06.703652"]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Redirected to http://test.host/
+Completed 302 Found in 7ms (ActiveRecord: 0.9ms)
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "items"
+  [1m[36m (4.6ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.2ms)[0m  begin transaction
+  [1m[36m (0.2ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mUser Exists (0.3ms)[0m  SELECT  1 AS one FROM "users" WHERE "users"."email" = 'mancy@gmail.com' LIMIT 1
+  [1m[36mSQL (0.6ms)[0m  [1mINSERT INTO "users" ("id", "email", "encrypted_password", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["id", 0], ["email", "mancy@gmail.com"], ["encrypted_password", "$2a$04$6XA.LC3h9dHrDVNv2n8jGeoVgdmQ4DGO2eyKKs9PkNEXAaBdRo7qS"], ["created_at", "2016-03-30 23:54:06.727905"], ["updated_at", "2016-03-30 23:54:06.727905"]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+Processing by ItemsController#create as HTML
+  Parameters: {"item"=>{"name"=>"Est aut provident quasi totam dolores accusantium."}, "user_id"=>"0"}
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 0]]
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.6ms)[0m  [1mINSERT INTO "items" ("name", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "Est aut provident quasi totam dolores accusantium."], ["user_id", 0], ["created_at", "2016-03-30 23:54:06.736386"], ["updated_at", "2016-03-30 23:54:06.736386"]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+Redirected to http://test.host/
+Completed 302 Found in 6ms (ActiveRecord: 0.8ms)
+  [1m[36mItem Load (0.2ms)[0m  [1mSELECT  "items".* FROM "items"  ORDER BY "items"."id" DESC LIMIT 1[0m
+  [1m[35m (1.5ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mUser Exists (0.3ms)[0m  [1mSELECT  1 AS one FROM "users" WHERE "users"."email" = 'mancy@yahoo.com' LIMIT 1[0m
+  [1m[35mSQL (0.5ms)[0m  INSERT INTO "users" ("id", "email", "encrypted_password", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)  [["id", 0], ["email", "mancy@yahoo.com"], ["encrypted_password", "$2a$04$9D9D.UOGxc9vCv9Nnw3UBu5.bi8JxFW2mW3A0y4erB2TARfhwZICG"], ["created_at", "2016-03-30 23:54:06.798022"], ["updated_at", "2016-03-30 23:54:06.798022"]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Processing by UsersController#show as HTML
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 0]]
+  Rendered users/show.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 79ms (Views: 77.0ms | ActiveRecord: 0.1ms)
+  [1m[36m (0.8ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+Processing by WelcomeController#about as HTML
+Completed 500 Internal Server Error in 1ms (ActiveRecord: 0.0ms)
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.2ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mUser Exists (58.4ms)[0m  SELECT  1 AS one FROM "users" WHERE "users"."email" = 'mancy@yahoo.com' LIMIT 1
+  [1m[36mSQL (7.5ms)[0m  [1mINSERT INTO "users" ("id", "email", "encrypted_password", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["id", 0], ["email", "mancy@yahoo.com"], ["encrypted_password", "$2a$04$tsoMQ3WdHuBJ/4r6RkFmWeo.4JbvF5Ew.kAxqPf773w5cIChvU3vG"], ["created_at", "2016-03-30 23:55:06.689391"], ["updated_at", "2016-03-30 23:55:06.689391"]]
+  [1m[35m (0.3ms)[0m  RELEASE SAVEPOINT active_record_1
+Processing by ItemsController#create as HTML
+  Parameters: {"item"=>{"name"=>"Consectetur eligendi et aut exercitationem nobis explicabo facere."}, "user_id"=>"0"}
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 0]]
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (1.3ms)[0m  [1mINSERT INTO "items" ("name", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "Consectetur eligendi et aut exercitationem nobis explicabo facere."], ["user_id", 0], ["created_at", "2016-03-30 23:55:06.829983"], ["updated_at", "2016-03-30 23:55:06.829983"]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+Redirected to http://test.host/
+Completed 302 Found in 95ms (ActiveRecord: 2.0ms)
+  [1m[36m (1.3ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.5ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mUser Exists (0.3ms)[0m  SELECT  1 AS one FROM "users" WHERE "users"."email" = 'mancy@hotmail.com' LIMIT 1
+  [1m[36mSQL (0.5ms)[0m  [1mINSERT INTO "users" ("id", "email", "encrypted_password", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["id", 0], ["email", "mancy@hotmail.com"], ["encrypted_password", "$2a$04$KMd/RerhgLq19eAkPkwiIO3g3EaOldNj36imbozavdTxa9SY6ve1O"], ["created_at", "2016-03-30 23:55:06.887378"], ["updated_at", "2016-03-30 23:55:06.887378"]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.2ms)[0m  [1mSELECT COUNT(*) FROM "items"[0m
+Processing by ItemsController#create as HTML
+  Parameters: {"item"=>{"name"=>"Deleniti a atque adipisci laudantium exercitationem quae."}, "user_id"=>"0"}
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 0]]
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.8ms)[0m  INSERT INTO "items" ("name", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)  [["name", "Deleniti a atque adipisci laudantium exercitationem quae."], ["user_id", 0], ["created_at", "2016-03-30 23:55:06.933317"], ["updated_at", "2016-03-30 23:55:06.933317"]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Redirected to http://test.host/
+Completed 302 Found in 12ms (ActiveRecord: 1.2ms)
+  [1m[35m (1.3ms)[0m  SELECT COUNT(*) FROM "items"
+  [1m[36m (1.3ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.3ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mUser Exists (0.2ms)[0m  SELECT  1 AS one FROM "users" WHERE "users"."email" = 'mancy@hotmail.com' LIMIT 1
+  [1m[36mSQL (0.5ms)[0m  [1mINSERT INTO "users" ("id", "email", "encrypted_password", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["id", 0], ["email", "mancy@hotmail.com"], ["encrypted_password", "$2a$04$38sOmQVt9n3HW2So1v.Hous88n8/5XR/YeOsAKLB/.Ii0XGDEfrS."], ["created_at", "2016-03-30 23:55:06.958230"], ["updated_at", "2016-03-30 23:55:06.958230"]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+Processing by ItemsController#create as HTML
+  Parameters: {"item"=>{"name"=>"Consequatur dicta cumque temporibus eum ipsam iure quas magnam."}, "user_id"=>"0"}
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 0]]
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.6ms)[0m  [1mINSERT INTO "items" ("name", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "Consequatur dicta cumque temporibus eum ipsam iure quas magnam."], ["user_id", 0], ["created_at", "2016-03-30 23:55:06.967485"], ["updated_at", "2016-03-30 23:55:06.967485"]]
+  [1m[35m (0.2ms)[0m  RELEASE SAVEPOINT active_record_1
+Redirected to http://test.host/
+Completed 302 Found in 9ms (ActiveRecord: 0.9ms)
+  [1m[36mItem Load (0.2ms)[0m  [1mSELECT  "items".* FROM "items"  ORDER BY "items"."id" DESC LIMIT 1[0m
+  [1m[35m (1.3ms)[0m  rollback transaction
+  [1m[36m (0.2ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mUser Exists (0.3ms)[0m  [1mSELECT  1 AS one FROM "users" WHERE "users"."email" = 'mancy@hotmail.com' LIMIT 1[0m
+  [1m[35mSQL (0.8ms)[0m  INSERT INTO "users" ("id", "email", "encrypted_password", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)  [["id", 0], ["email", "mancy@hotmail.com"], ["encrypted_password", "$2a$04$YVrnQTSc5pxbAJlr4Q9Yn.zRXFAOCKFNmzAnX5k6LV46GarG5qgGq"], ["created_at", "2016-03-30 23:55:06.993360"], ["updated_at", "2016-03-30 23:55:06.993360"]]
+  [1m[36m (0.2ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Processing by UsersController#show as HTML
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 0]]
+  Rendered users/show.html.erb within layouts/application (0.9ms)
+Completed 200 OK in 106ms (Views: 99.3ms | ActiveRecord: 0.1ms)
+  [1m[36m (0.7ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+Processing by WelcomeController#about as HTML
+Completed 500 Internal Server Error in 1ms (ActiveRecord: 0.0ms)
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.2ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mUser Exists (0.3ms)[0m  SELECT  1 AS one FROM "users" WHERE "users"."email" = 'mancy@hotmail.com' LIMIT 1
+  [1m[36mSQL (0.7ms)[0m  [1mINSERT INTO "users" ("id", "email", "encrypted_password", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["id", 0], ["email", "mancy@hotmail.com"], ["encrypted_password", "$2a$04$wjt3BACGSrLcps8y3qJxDOtwJGgq3ozjNx3b9QyKXwObBRw0EwFTm"], ["created_at", "2016-03-30 23:55:39.405860"], ["updated_at", "2016-03-30 23:55:39.405860"]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+Processing by ItemsController#create as HTML
+  Parameters: {"item"=>{"name"=>"Repudiandae modi aliquid sint corrupti quia veniam dolores libero."}, "user_id"=>"0"}
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 0]]
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.9ms)[0m  [1mINSERT INTO "items" ("name", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "Repudiandae modi aliquid sint corrupti quia veniam dolores libero."], ["user_id", 0], ["created_at", "2016-03-30 23:55:39.509707"], ["updated_at", "2016-03-30 23:55:39.509707"]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+Redirected to http://test.host/
+Completed 302 Found in 92ms (ActiveRecord: 1.6ms)
+  [1m[36m (1.3ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mUser Exists (0.2ms)[0m  SELECT  1 AS one FROM "users" WHERE "users"."email" = 'mancy@gmail.com' LIMIT 1
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "users" ("id", "email", "encrypted_password", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["id", 0], ["email", "mancy@gmail.com"], ["encrypted_password", "$2a$04$QmISbU5nb8VD2gu0Fx3tOOrgkEUiCcQglwcl45tmsVsVirxFKIYmi"], ["created_at", "2016-03-30 23:55:39.525648"], ["updated_at", "2016-03-30 23:55:39.525648"]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.2ms)[0m  [1mSELECT COUNT(*) FROM "items"[0m
+Processing by ItemsController#create as HTML
+  Parameters: {"item"=>{"name"=>"Nulla doloribus id aut neque eius vero."}, "user_id"=>"0"}
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 0]]
+  [1m[36m (9.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (1.5ms)[0m  INSERT INTO "items" ("name", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)  [["name", "Nulla doloribus id aut neque eius vero."], ["user_id", 0], ["created_at", "2016-03-30 23:55:39.587625"], ["updated_at", "2016-03-30 23:55:39.587625"]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Redirected to http://test.host/
+Completed 302 Found in 52ms (ActiveRecord: 10.7ms)
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "items"
+  [1m[36m (1.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mUser Exists (0.3ms)[0m  SELECT  1 AS one FROM "users" WHERE "users"."email" = 'mancy@hotmail.com' LIMIT 1
+  [1m[36mSQL (0.6ms)[0m  [1mINSERT INTO "users" ("id", "email", "encrypted_password", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["id", 0], ["email", "mancy@hotmail.com"], ["encrypted_password", "$2a$04$AXLhcX/y7uWpDt9Uqbuhjud.SPY60unYr0GrGE.S/1w3z8iMx/cLq"], ["created_at", "2016-03-30 23:55:39.603296"], ["updated_at", "2016-03-30 23:55:39.603296"]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+Processing by ItemsController#create as HTML
+  Parameters: {"item"=>{"name"=>"Consequatur animi provident minus."}, "user_id"=>"0"}
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 0]]
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.8ms)[0m  [1mINSERT INTO "items" ("name", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "Consequatur animi provident minus."], ["user_id", 0], ["created_at", "2016-03-30 23:55:39.615141"], ["updated_at", "2016-03-30 23:55:39.615141"]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+Redirected to http://test.host/
+Completed 302 Found in 8ms (ActiveRecord: 1.1ms)
+  [1m[36mItem Load (0.2ms)[0m  [1mSELECT  "items".* FROM "items"  ORDER BY "items"."id" DESC LIMIT 1[0m
+  [1m[35m (1.2ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mUser Exists (31.5ms)[0m  [1mSELECT  1 AS one FROM "users" WHERE "users"."email" = 'mancy@hotmail.com' LIMIT 1[0m
+  [1m[35mSQL (0.7ms)[0m  INSERT INTO "users" ("id", "email", "encrypted_password", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)  [["id", 0], ["email", "mancy@hotmail.com"], ["encrypted_password", "$2a$04$uurT9PPlHCAYGZAjNt.ZaO.wHDt7f5jEiapM9zgSrWdR5ZDp/ezGS"], ["created_at", "2016-03-30 23:55:39.668246"], ["updated_at", "2016-03-30 23:55:39.668246"]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Processing by UsersController#show as HTML
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 0]]
+  Rendered users/show.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 43ms (Views: 39.8ms | ActiveRecord: 0.1ms)
+  [1m[36m (30.4ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.5ms)[0m  begin transaction
+Processing by WelcomeController#about as HTML
+Completed 500 Internal Server Error in 0ms (ActiveRecord: 0.0ms)
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
