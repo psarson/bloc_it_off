@@ -1,0 +1,6 @@
+<%= form_for [user, item] do |f| %>
+  <div class="form-group">
+    <%= f.text_field :name, class: 'form_control', placeholder: "Do what now?" %>
+    <%= f.submit "Save" %>
+  </div>
+<% end %>

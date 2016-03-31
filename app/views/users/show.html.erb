@@ -1,2 +1,25 @@
+<<<<<<< HEAD
 <h1>Profile</h1>
 <p>Email: <%= @user.email %></p>
+=======
+<div class="container">
+<h1>Profile</h1>
+<p>Email: <%= @user.email %></p>
+  <div class="row">
+    <div class="col-md-8">
+        <div class="media">
+          <div class="media-body">
+           <div class='js-item'><%= render @user.items %></div>
+          </div>
+        </div>
+          <div class="media">
+            <div class="media-body">
+            <% if current_user %>
+              <%= render partial: 'items/form', locals: { user: @user, item: Item.new } %>
+            <% end %>
+          </div>
+         </div>
+      </div>
+     </div>
+   </div>
+>>>>>>> b84b004af992fbeffdb9e2c0e1c775955b14ee7c
