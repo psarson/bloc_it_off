@@ -1,4 +1,4 @@
-<li class= "list-group-item">
-  <%= item.name %>
-  | <%= link_to " ", [current_user, item], method: :delete, remote: true, class: 'glyphicon glyphicon-ok' %>
-</li>
+<%= content_tag :tr, class: "info", id: "item-#{item.id}" do %>
+  <td><%= item.name %></td>
+  <td><%= link_to '', [current_user, item], method: :delete, class: 'glyphicon glyphicon-ok white', remote: true %></td>
+<% end %>
