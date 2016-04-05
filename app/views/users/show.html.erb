@@ -1,20 +1,13 @@
 <div class="container">
 <h1>Profile</h1>
 <p>Email: <%= @user.email %></p>
-  <div class="row">
-    <div class="col-md-8">
-        <div class="media">
-          <div class="media-body">
-           <div class='js-item'><%= render @user.items %></div>
-          </div>
-        </div>
-          <div class="media">
-            <div class="media-body">
-            <% if current_user %>
-              <%= render partial: 'items/form', locals: { user: @user, item: Item.new } %>
-            <% end %>
-          </div>
-         </div>
-      </div>
-     </div>
-   </div>
+  <h1>To Do List:<h1>
+    <div class="table-responsive">
+      <table class="table table-hover">
+        <%= render @user.items %>
+      </table>
+    </div>
+  <div class='new-item'>
+    <%= render 'items/form', item: Item.new, user: @user %>
+  </div>
+</div>
